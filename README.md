@@ -33,11 +33,26 @@ cd CakePhp
 composer install
 ```
 
-4. Para testar a instalação da aplicação, verificar se se encontra na raiz do projecto e 
+4. Mudar o "owership" do projecto e configurar as permissões
+
+Se ainda não adiciou o seu utilizador ao grupo `www-data`, adicione o utilizador `www-data` como um dos`owners`
+do projecto:
+
+```bash
+chown -R nome_de_utilizador:www-data CakepPhp
+```
+
+Definir permisões para a pastas de consola do CakePHP:
+
+```bash
+chmod -R 775 bin/
+```
+
+5. Para testar a instalação da aplicação, verificar se se encontra na raiz do projecto e 
 depois executar o seguinte comando:
 
 ```bash
-bin/cake server -p 8765
+./bin/cake server -p 8765
 ```
 
 Depois visite [`http://localhost:8765`](http://localhost:8765) para ver a página inicial da aplicação.
