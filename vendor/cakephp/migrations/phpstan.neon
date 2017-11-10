@@ -1,5 +1,0 @@
-services:
-    -
-        class: Migrations\PHPStan\ShellPropertiesClassReflectionExtension
-        tags:
-            - phpstan.broker.propertiesClassReflectionExtension

@@ -1,7 +1,7 @@
 /* global vis, console */
 /* jshint strict: true, browser:true, jquery: true */
 
-$(document).ready(function () {
+$(function () {
 
     'use strict';
 
@@ -39,9 +39,8 @@ $(document).ready(function () {
         }
 
     });
-    
+
     // all bootstrap defined tooltips that have the defined data-tooltip="iu-tooltip"
     $(document).tooltip({container: 'body', selector: '[data-tooltip="ui-tooltip"]', trigger: 'hover'});
 
 });
-
