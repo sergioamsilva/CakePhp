@@ -19,21 +19,17 @@ sudo curl -s https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-2. Se o Composer já estiver instalado, actualizar o mesmo:
+Se o Composer já estiver instalado, actualizar o mesmo:
 
 ```bash
 composer self-update
 ```
 
-3. Puxar este template para criar um projecto:
+2. Clone este template para criar um novo um projecto:
 
 ```bash
 git clone https://github.com/sergioamsilva/CakePhp.git
-cd CakePhp
-composer install
 ```
-
-4. Mudar o "owership" do projecto e configurar as permissões
 
 Se ainda não adiciou o seu utilizador ao grupo `www-data`, adicione o utilizador `www-data` como um dos`owners`
 do projecto:
@@ -42,7 +38,19 @@ do projecto:
 chown -R nome_de_utilizador:www-data CakepPhp
 ```
 
-Definir permisões para a pastas de consola do CakePHP:
+Após clonar o projecto deverá prosseguir para o próximo passo, que será instalar as dependências:
+
+```bash
+cd CakePhp
+composer install
+```
+
+3. Configurações
+
+Para alterar as configurações relativas ao projecto como a configuração da base de dados, o fuso horário,
+e-mail, etc., entre na pasta `config` e renomeie o ficheiro `app.default.php` para `app.php`.
+
+4. Definir permisões para a pastas da consola do CakePHP:
 
 ```bash
 chmod -R 775 bin/
@@ -65,11 +73,6 @@ projecto, entre na raiz do projecto e execute o seguinte comando:
 ```bash
 composer update
 ```
-
-## Configurações
-
-Para alterar as configurações relativas ao projecto como a configuração da base de dados, o fuso horário,
-e-mail, etc., entre na pasta `config` e renomeie o ficheiro `app.default.php` para `app.php`.
 
 ## Layout (apresentação)
 
