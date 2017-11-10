@@ -35,7 +35,7 @@ Se ainda não adiciou o seu utilizador ao grupo `www-data`, adicione o utilizado
 do projecto:
 
 ```bash
-chown -R nome_de_utilizador:www-data CakePhp
+sudo chown -R nome_de_utilizador:www-data CakePhp
 ```
 
 Após clonar o projecto deverá prosseguir para o próximo passo, que será instalar as dependências:
