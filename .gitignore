@@ -1,7 +1,7 @@
 # User specific & automatically generated files #
 #################################################
 
-.htaccess
+#.htaccess
 /config/app.php
 /tmp/*
 /logs/*
