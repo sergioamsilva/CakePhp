@@ -70,6 +70,7 @@ Depois visite [`http://localhost:8765`](http://localhost:8765) para ver a págin
 ```bash
 sudo apt-get install sqlite3
 sudo apt-get install php7.x-sqlite3
+composer require --dev cakephp/debug_kit "~3.0"  // na raiz do projecto
 ```
 Após instalar os pacotes acima, inserir as seguintes linhas de código no fim do ficheiro `config/boostrap.php`:
 
