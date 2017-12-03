@@ -65,6 +65,20 @@ depois executar o seguinte comando:
 
 Depois visite [`http://localhost:8765`](http://localhost:8765) para ver a página inicial da aplicação.
 
+6. Para instalar o Debugkit:
+
+```bash
+sudo apt-get install sqlite3
+sudo apt-get install php7.x-sqlite3
+```
+Após instalar os pacotes acima, inserir as seguintes linhas de código no fim do ficheiro `config/boostrap.php`:
+
+```php
+if (Configure::read('debug')) {
+    Plugin::load('DebugKit', ['bootstrap' => true]);
+}
+```
+
 ## Actualizações do projecto
 
 Infelizmente as actualização desta framework não é automática. Para actualizar todas as dependências do
