@@ -56,16 +56,7 @@ e-mail, etc., entre na pasta `config` e renomeie o ficheiro `app.default.php` pa
 chmod -R 775 bin/
 ```
 
-5. Para testar a instalação da aplicação, verificar se se encontra na raiz do projecto e 
-depois executar o seguinte comando:
-
-```bash
-./bin/cake server -p 8765
-```
-
-Depois visite [`http://localhost:8765`](http://localhost:8765) para ver a página inicial da aplicação.
-
-6. Para instalar o Debugkit:
+5. Para instalar o Debugkit:
 
 ```bash
 sudo apt-get install sqlite3
@@ -79,6 +70,21 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 ```
+
+6. Reiniciar o apache para assumir as novas configurações
+
+```bash
+sudo service apache2 restart
+```
+
+7. Para testar a instalação da aplicação, verificar se se encontra na raiz do projecto e 
+depois executar o seguinte comando:
+
+```bash
+./bin/cake server -p 8765
+```
+
+Depois visite [`http://localhost:8765`](http://localhost:8765) para ver a página inicial da aplicação.
 
 ## Actualizações do projecto
 
